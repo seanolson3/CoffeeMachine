@@ -1,3 +1,5 @@
+import time
+
 """Menu dictionary holding name, ingredients, cost."""
 MENU = {
     "espresso": {
@@ -78,6 +80,9 @@ is_on = True
 while is_on:
   choice = input("What would you like? (espresso/latte/cappuccino): ")
   if choice == "off":
+    print("Shutting down....")
+    time.sleep(1)
+    print("System Shut Down")
     is_on = False
   elif choice == "report":
     print(f"Water: {resources['water']}ml")
